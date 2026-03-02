@@ -161,7 +161,7 @@ report:
                                       # ⚠️ 开启调度系统后，此值会被当前时间段的 report_mode 覆盖
 
 
-  display_mode: "platform"             # 分组维度: keyword | platform
+  display_mode: "keyword"             # 分组维度: keyword | platform
                                       # keyword: 按关键词分组显示（默认）
                                       # platform: 按平台/来源分组显示
 
@@ -200,14 +200,14 @@ display:
     - ai_analysis                       # 5️⃣ AI 分析区域
   regions:
     new_items: true # 新增热点区域（含热榜新增 + RSS 新增）
-    hotlist: true # 热榜区域（关键词匹配的热点新闻）
-    rss: true # RSS 订阅区域
+    hotlist: false # 热榜区域（关键词匹配的热点新闻）
+    rss: false # RSS 订阅区域
     standalone: true # 独立展示区（完整热榜/RSS，不受关键词过滤）
     ai_analysis: true # AI 分析区域
   standalone:
-    platforms: ["zhihu","wallstreetcn-hot","toutiao","baidu","thepaper","bilibili-hot-search","cls-hot","tieba","ifeng","weibo","douyin"] # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
-    rss_feeds: ["hacker-news","ruanyifeng","yahoo-finance"] # RSS 源 ID 列表（如 ["hacker-news"]）
-    max_items: 20                     # 每个源最多展示条数（0=不限制）
+    platforms: ["zhihu","wallstreetcn-hot","toutiao","baidu","thepaper","bilibili-hot-search","tieba","ifeng","weibo","douyin"] # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
+    rss_feeds: [] # RSS 源 ID 列表（如 ["hacker-news"]）
+    max_items: 15                     # 每个源最多展示条数（0=不限制）
 
 
 # ===============================================================
